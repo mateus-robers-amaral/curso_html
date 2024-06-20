@@ -5,16 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu HTML</title>
     <style>
+        .imagem {
+            width: 50px;
+            height: 100px;
+        }
+        .texto_vermelho {
+            font-size: 24px;
+            color: red;
+        }
     </style>
 </head>
 <body>
     <h1>Cabeçalho</h1>
-    </h1>
-    <p><b>Lorem</b> <em>ipsum</em> <i>dolor</i> <strong>amet</strong> consectetur adipisicing elit. Placeat explicabo assumenda, consequuntur reiciendis similique veniam tempora sequi maiores iste! Deserunt tempore sint cum, velit aliquam enim quidem repudiandae id facere!</p>
+    <p> 
+        <img class="imagem"
+        src="https://br.freepik.com/fotos-vetores-gratis/picture" alt="Foto" width="50" height="100">
+        
+        <b>Lorem</b> <em>ipsum</em> <i>dolor</i> <strong>amet</strong> consectetur adipisicing elit. Placeat explicabo assumenda, consequuntur reiciendis similique veniam tempora sequi maiores iste! Deserunt tempore sint cum, velit aliquam enim quidem repudiandae id facere!</p>
+        
+        <hr>
+
     <h2>Meu Título</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia ab repellat soluta culpa fugit harum rem, cupiditate unde maxime amet quos eligendi temporibus cumque tempore animi eius. Explicabo, hic.</p>
+    <p><span class="texto_vermelho"> CÓDIGO DO LITTLE PROFESSOR - CS50 
+    </span>
+    </p>
+    <pre><code>import random
+
+
+        def main():
+            level = get_level()
+            score = simulate_game(level)
+            print("Score: ", score)
+        
+        def get_level():
+            while True:
+                try:
+                    level = int(input("Level: "))
+                    if level in [1, 2, 3]:
+                        break
+                except:
+                    pass
+            return level
+        def generate_integer(level):
+            if level == 1:
+                x = random.randint(0, 9)
+                y = random.randint(0, 9)
+            elif level == 2:
+                x = random.randint(10, 99)
+                y = random.randint(10, 99)
+            elif level == 3:
+                x = random.randint(100, 999)
+                y = random.randint(100, 999)
+            return x,y
+        
+        def simulate_round(x, y):
+            count_tries = 1
+            while count_tries <= 3:
+                try:
+                    answer = int(input(f"{x} + {y} = "))
+                    if answer == (x + y):
+                        return True
+                    else:
+                        count_tries += 1
+                        print("EEE")
+                except:
+                    count_tries += 1
+                    print("EEE")
+        
+            print(f"{x} + {y} = {(x + y)}")
+            return False
+        
+        def simulate_game(level):
+            count_round = 1
+            score = 0
+            while count_round <= 10:
+                x, y = generate_integer(level)
+                response = simulate_round(x, y)
+                if response == True:
+                    score += 1
+                count_round += 1
+            return score
+        
+        if __name__ == "__main__":
+            main()
+        </code></pre>
+        <div class="texto_vermelho">Eu sou um bloco.</div>
     <h3>Meu Título</h3>
+    <p>OMA GAW</p>
+    <blockquote>Citação da UVDM - Universidade Vozes da Minha Cabeça</blockquote>
     <h4>Meu Título</h4>
+    <p><del>vermelho</del> <ins>azul</ins> 2<sup>2</sup> H<sub>2</sub>O</p>
     <h5>Meu Título</h5>
     <h6>Meu Título</h6>
 </body>
