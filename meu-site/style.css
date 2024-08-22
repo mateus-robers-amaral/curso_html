@@ -1,13 +1,5 @@
-@font-face {
-    font-family: 'JetBrains';
-    src: url('C:/Users/rober/Downloads/JetBrainsMono-1.0.3.zip/JetBrainsMono-1.0.3') format('ttf2'),
-         url('C:/Users/rober/Downloads/JetBrainsMono-1.0.3.zip/JetBrainsMono-1.0.3') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
-    font-family: 'JetBrains', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #e4e4e4;
     margin: 0;
     padding: 0;
@@ -22,4 +14,16 @@ h1 {
 p {
     color: #555;
     font-size: 18px;
+}
+
+.org{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.imagem_redonda{
+    border-radius: 90%;
+    margin-top: 30px;
 }
